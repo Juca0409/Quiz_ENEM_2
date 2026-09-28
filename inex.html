@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz ENEM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="topbar">
+    <div>
+      <h1>🎓 Quiz ENEM</h1>
+      <p>Teste seus conhecimentos e acompanhe seu desempenho.</p>
+    </div>
+
+    <button id="themeBtn" class="theme-btn">🌙</button>
+  </header>
+
+  <main class="container">
+
+    <section id="startScreen" class="card start-screen">
+      <div class="emoji">📚</div>
+      <h2>Simulado ENEM</h2>
+      <p>
+        Responda às questões, acompanhe seu tempo e veja seu desempenho
+        no final.
+      </p>
+
+      <div class="settings">
+        <label>
+          Número de questões
+          <select id="questionCount">
+            <option value="5">5 questões</option>
+            <option value="10" selected>10 questões</option>
+            <option value="15">15 questões</option>
+            <option value="20">20 questões</option>
+          </select>
+        </label>
+
+        <label>
+          Tempo
+          <select id="timeLimit">
+            <option value="300">5 minutos</option>
+            <option value="600" selected>10 minutos</option>
+            <option value="1200">20 minutos</option>
+            <option value="0">Sem limite</option>
+          </select>
+        </label>
+      </div>
+
+      <button id="startBtn" class="primary-btn">
+        Começar simulado 🚀
+      </button>
+    </section>
+
+    <section id="quizScreen" class="quiz-screen hidden">
+
+      <div class="quiz-header">
+        <div>
+          <span id="questionNumber">Questão 1</span>
+          <strong id="score">0 acertos</strong>
+        </div>
+
+        <div id="timer" class="timer">
+          ⏱️ 10:00
+        </div>
+      </div>
+
+      <div class="progress-container">
+        <div id="progressBar"></div>
+      </div>
+
+      <div class="card question-card">
+        <span id="subject" class="subject">Linguagens</span>
+
+        <h2 id="question"></h2>
+
+        <div id="options" class="options"></div>
+
+        <div id="feedback" class="feedback hidden"></div>
+
+        <button id="nextBtn" class="primary-btn next-btn hidden">
+          Próxima questão →
+        </button>
+      </div>
+
+    </section>
+
+    <section id="resultScreen" class="card result-screen hidden">
+
+      <div class="result-icon">🏆</div>
+
+      <h2>Simulado finalizado!</h2>
+
+      <div class="result-score">
+        <span id="finalScore">0%</span>
+      </div>
+
+      <p id="resultMessage"></p>
+
+      <div class="stats">
+        <div>
+          <strong id="correctAnswers">0</strong>
+          <span>Acertos</span>
+        </div>
+
+        <div>
+          <strong id="wrongAnswers">0</strong>
+          <span>Erros</span>
+        </div>
+
+        <div>
+          <strong id="totalQuestions">0</strong>
+          <span>Questões</span>
+        </div>
+      </div>
+
+      <div id="review" class="review"></div>
+
+      <button id="restartBtn" class="primary-btn">
+        Fazer novamente 🔄
+      </button>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Quiz ENEM • Desenvolvido para estudos 📖</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
